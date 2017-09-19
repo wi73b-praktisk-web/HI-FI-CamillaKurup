@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Form */
+
+#news-form{
+	margin:40px 20px;
+}
+
+
+.input, .input-kontakt, .textarea-kontakt{
+	color:#000000;
+	border: 2px solid;
+	border-radius: 4px;
+	height:38px;
+	width:85%;
+	padding-left: 10px;
+}
+
+.input-kontakt, .textarea-kontakt{
+	margin-bottom:20px;
+}
+
+.textarea-kontakt{
+	height:200px;
+	padding-top:10px;
+	
+}
+

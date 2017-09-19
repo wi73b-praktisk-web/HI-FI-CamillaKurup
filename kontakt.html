@@ -9,6 +9,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/form.css">
     <title>HI FI</title>
 </head>
 
@@ -19,11 +20,11 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
                         aria-controls="navbar">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
+                                  <span class="sr-only">Toggle navigation</span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                </button>
                     <a class="navbar-brand" href="index.html">HI FI</a>
                 </div>
 
@@ -36,28 +37,16 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Katalog <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-submenu">
-                                    <a class="test" tabindex="-1" href="#">Forstærkere <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a tabindex="-1" href="#">id#1</a></li>
-                                        <li><a tabindex="-1" href="#">id#2</a></li>
+                                    <a class="test" tabindex="-1" href="produkter.html">Forstærkere </a>
 
-                                    </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="test" tabindex="-1" href="#">Afspillere <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a tabindex="-1" href="#">id#1</a></li>
-                                        <li><a tabindex="-1" href="#">id#2</a></li>
+                                    <a class="test" tabindex="-1" href="produkter.html">Afspillere </a>
 
-                                    </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="test" tabindex="-1" href="#">Højtalere <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a tabindex="-1" href="#">id#1</a></li>
-                                        <li><a tabindex="-1" href="#">id#2</a></li>
+                                    <a class="test" tabindex="-1" href="produkter.html">Højtalere </a>
 
-                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -67,75 +56,71 @@
                 </div>
             </div>
         </nav>
+    </header>
 
-        <main class="container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <div id="imaginary_container">
-                            <div class="input-group stylish-input-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="input-group-addon">
+    <main class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div id="imaginary_container">
+                        <div class="input-group stylish-input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon">
                                             <button type="submit">
                                                 <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                </span>
-                            </div>
+                            </button>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile">
-                    <p class="help-block">Example block-level help text here.</p>
-                </div>
-                <div class="checkbox">
-                    <label>
-                            <input type="checkbox"> Check me out
-                          </label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-        </main>
+        </div>
+        <form id="formId" class="col-xs-12" method="post" onSubmit="return formular(this);">
+            <label for="forNavn"></label><br>
+            <input class="input-kontakt" type="text" name="fornavn" placeholder="Navn" id="forNavn">
+
+            <label for="eMail"></label><br>
+            <input class="input-kontakt" type="email" name="mail" placeholder="Mail" id="eMail"><br>
+
+            <label for="emne"></label><br>
+            <input id="emne" class="input-kontakt" name="overskrift" placeholder="Emne">
+            <br>
+            <label for="besked"></label><br>
+            <textarea id="besked" class="textarea-kontakt" name="kommentar" placeholder="Besked"></textarea>
+            <br>
+            <input class="input-submit-kontakt" type="submit" name="sendKnap" value="Send" id="submitKnap">
+        </form>
+    </main>
 
 
-        <footer>
-                <div class="col-xs-7 " >
-                <address>
-                    <strong>Hi Fi</strong><br> Digitalvej 45<br> 4000 Roskilde<br>
-                    <p>+45 45501032</p>
-                    <a href="mailto:#">kontakt@hi-fi.dk</a>
-                </address>
-                </div>
-                <div class="col-xs-5">
-                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                </div>
-            </footer>
+    <footer>
+        <div class="col-xs-7 ">
+            <address>
+                <strong>Hi Fi</strong><br> Digitalvej 45<br> 4000 Roskilde<br>
+                <p>+45 45501032</p>
+                <a href="mailto:#">kontakt@hi-fi.dk</a>
+            </address>
+        </div>
+        <div class="col-xs-5">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+        </div>
+    </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                $('.dropdown-submenu a.test').on("click", function (e) {
-                    $(this).next('ul').toggle();
-                    e.stopPropagation();
-                    e.preventDefault();
-                });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
             });
-        </script>
+        });
+    </script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
